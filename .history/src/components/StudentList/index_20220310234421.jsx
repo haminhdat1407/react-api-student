@@ -19,11 +19,11 @@ function StudentList({ data }) {
             <tr>
               <th>ID Student</th>
               <th>Name</th>
-              <th>Age</th>
-              <th>Mark</th>
-              <th>Gender</th>
-              <th>City</th>
-              <th>CreatedAt</th>
+              <th>age</th>
+              <th>mark</th>
+              <th>gender</th>
+              <th>city</th>
+              <th>createdAt</th>
             </tr>
 
             {data.map((item) => (

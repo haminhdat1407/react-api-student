@@ -23,7 +23,7 @@ function StudentList({ data }) {
               <th>Mark</th>
               <th>Gender</th>
               <th>City</th>
-              <th>CreatedAt</th>
+              <th>createdAt</th>
             </tr>
 
             {data.map((item) => (

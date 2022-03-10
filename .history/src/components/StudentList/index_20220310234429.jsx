@@ -22,8 +22,8 @@ function StudentList({ data }) {
               <th>Age</th>
               <th>Mark</th>
               <th>Gender</th>
-              <th>City</th>
-              <th>CreatedAt</th>
+              <th>city</th>
+              <th>createdAt</th>
             </tr>
 
             {data.map((item) => (
