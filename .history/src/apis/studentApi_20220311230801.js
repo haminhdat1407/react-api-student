@@ -5,10 +5,9 @@ const studentApi = {
     const url = `students`;
     return axiosClient.get(url);
   },
-
-  removeStudentByID(id) {
+  getStudentByID(id) {
     const url = `students/${id}`;
-    return axiosClient.delete(url);
+    return axiosClient.get(url);
   },
 };
 

@@ -30,6 +30,6 @@ tr:nth-child(even) {
 
 @media only screen and (max-width: 900px) {
   .res {
-    display: none;
+    background-color: lightblue;
   }
 }

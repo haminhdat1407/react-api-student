@@ -40,10 +40,7 @@ export default function App() {
     });
     setStudentList(newStudentList);
   };
-  //  [dat01, dat02]].lenn 2 2
 
-  //  id : "dat" + (data.lenght + 1)
-  //  6 filed
   return (
     <>
       <StudentList data={studentList} onRemove={handleRemoveUser} />

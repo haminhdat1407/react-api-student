@@ -40,7 +40,7 @@ function StudentList({ data, onRemove }) {
                 <td className='res'>
                   {dayjs(item.createdAt).format('DD/MM/YYYY')}
                 </td>
-                <td className='delete_btn res'>
+                <td className='delete_btn'>
                   <i
                     className='fa-solid fa-delete-left'
                     onClick={() => handleRemove(item.id)}

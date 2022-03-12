@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './style.css';
 import dayjs from 'dayjs';
+// rsfp
 
 StudentList.propTypes = {
   data: PropTypes.array,
-  onRemove: PropTypes.func,
 };
 
 function StudentList({ data, onRemove }) {
@@ -23,10 +23,9 @@ function StudentList({ data, onRemove }) {
               <th>Name</th>
               <th>Age</th>
               <th>Mark</th>
-              <th className='res'>Gender</th>
-              <th className='res'>City</th>
-              <th className='res'>CreatedAt</th>
-              <th className='res'>Action</th>
+              <th>Gender</th>
+              <th>City</th>
+              <th>CreatedAt</th>
             </tr>
 
             {data.map((item) => (
@@ -35,12 +34,10 @@ function StudentList({ data, onRemove }) {
                 <td>{item.name}</td>
                 <td>{item.age}</td>
                 <td>{item.mark}</td>
-                <td className='res'>{item.gender}</td>
-                <td className='res'>{item.city}</td>
-                <td className='res'>
-                  {dayjs(item.createdAt).format('DD/MM/YYYY')}
-                </td>
-                <td className='delete_btn res'>
+                <td>{item.gender}</td>
+                <td>{item.city}</td>
+                <td>{dayjs(item.createdAt).format('DD/MM/YYYY')}</td>
+                <td className='delete_btn'>
                   <i
                     className='fa-solid fa-delete-left'
                     onClick={() => handleRemove(item.id)}

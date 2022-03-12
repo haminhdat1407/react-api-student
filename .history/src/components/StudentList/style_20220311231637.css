@@ -27,9 +27,3 @@ tr:nth-child(even) {
   cursor: pointer;
   color: red;
 }
-
-@media only screen and (max-width: 900px) {
-  .res {
-    display: none;
-  }
-}

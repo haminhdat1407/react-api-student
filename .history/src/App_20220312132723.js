@@ -31,19 +31,16 @@ export default function App() {
       console.log(error);
     }
   }, [idRemove]);
-  const handleRemoveUser = (idDeleted) => {
-    setIdRemove(idDeleted);
+  const handleRemoveUser = (idDelete) => {
+    setIdRemove(idDelete);
 
     const newStudentList = studentList.filter((student) => {
       // tra ve 1 mang moi...khong co id can xoa
-      return student.id !== idDeleted;
+      return student.id !== idDelete;
     });
     setStudentList(newStudentList);
   };
-  //  [dat01, dat02]].lenn 2 2
 
-  //  id : "dat" + (data.lenght + 1)
-  //  6 filed
   return (
     <>
       <StudentList data={studentList} onRemove={handleRemoveUser} />

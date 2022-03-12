@@ -29,7 +29,7 @@ tr:nth-child(even) {
 }
 
 @media only screen and (max-width: 900px) {
-  .res {
-    display: none;
+  className='res' {
+    background-color: lightblue;
   }
 }
