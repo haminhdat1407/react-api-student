@@ -1,0 +1,8 @@
+.lb-student {
+  display: flex;
+  justify-content: left;
+  color: rgb(253, 253, 253);
+  font-family: -webkit-body;
+  font-size: 30px;
+  background: rgb(112, 102, 206);
+}

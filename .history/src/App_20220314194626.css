@@ -1,0 +1,12 @@
+.lb-student {
+  font-family: -webkit-body;
+  font-size: 30px;
+}
+.row-8 {
+  align-items: center;
+  background-color: cyan;
+  margin-bottom: 12px;
+}
+.ant-btn-primary {
+  display: none;
+}
