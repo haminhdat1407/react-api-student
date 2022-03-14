@@ -1,0 +1,14 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Input } from 'antd';
+
+SearchForm.propTypes = {
+  onChange: PropTypes.func,
+};
+
+function SearchForm(props) {
+  const handleInputChange = () => {};
+  return <Input placeholder='Search...' onChange={handleInputChange} />;
+}
+
+export default SearchForm;
