@@ -24,13 +24,14 @@ function ModalForm({ onChange }) {
     const value = { ...e };
 
     const formValue = {
-      ...value,
+      ...value.lenght,
       id: value.id + Math.random() * 1,
     };
 
     setDataForm(formValue);
     onChange(formValue);
   };
+  console.log(formValue.lenght);
 
   const showModal = () => {
     setIsModalVisible(true);

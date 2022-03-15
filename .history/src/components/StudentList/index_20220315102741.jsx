@@ -29,7 +29,7 @@ function StudentList({ data, onRemove, onChange }) {
   const [idEdit, setIdEdit] = useState('');
 
   const [studentEdit, setStudentEdit] = useState({});
-  debugger;
+
   useEffect(() => {
     (async () => {
       if (idEdit) {

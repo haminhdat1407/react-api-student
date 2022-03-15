@@ -7,7 +7,6 @@ import {
   Radio,
   Select,
   Table,
-  DatePicker,
 } from 'antd';
 import 'antd/dist/antd.css';
 import dayjs from 'dayjs';
@@ -29,12 +28,13 @@ function StudentList({ data, onRemove, onChange }) {
   const [idEdit, setIdEdit] = useState('');
 
   const [studentEdit, setStudentEdit] = useState({});
-  debugger;
+
   useEffect(() => {
     (async () => {
       if (idEdit) {
         const student = await studentApi.getByID(idEdit);
         setStudentEdit(student);
+        console.log(studentEdit);
       }
     })();
   }, [idEdit]);
@@ -151,7 +151,7 @@ function StudentList({ data, onRemove, onChange }) {
             }}
           >
             <Form.Item label='ID' name='id'>
-              <Input defaultValue={studentEdit?.id} />
+              <Input defaultValue={studentEdit.id} />
             </Form.Item>
             <Form.Item
               label='Name'
@@ -163,7 +163,7 @@ function StudentList({ data, onRemove, onChange }) {
                 },
               ]}
             >
-              <Input defaultValue={studentEdit?.name} />
+              <Input defaultValue={studentEdit.name} />
             </Form.Item>
             <Form.Item
               label='Age'
@@ -177,7 +177,7 @@ function StudentList({ data, onRemove, onChange }) {
                 },
               ]}
             >
-              <InputNumber defaultValue={studentEdit?.age} />
+              <InputNumber defaultValue={studentEdit.age} />
             </Form.Item>
             <Form.Item
               label='Mark'
@@ -192,7 +192,7 @@ function StudentList({ data, onRemove, onChange }) {
                 },
               ]}
             >
-              <InputNumber defaultValue={studentEdit?.mark} />
+              <InputNumber defaultValue={studentEdit.mark} />
             </Form.Item>
             <Form.Item
               label='Gender'
@@ -206,15 +206,11 @@ function StudentList({ data, onRemove, onChange }) {
             >
               <Radio.Group
                 style={{ marginLeft: '12px' }}
-                defaultValue={studentEdit?.gender === 'male' ? 1 : 2}
+                defaultValue={studentEdit.gender === 'male' ? 1 : 2}
               >
                 <Radio value={1}>Male</Radio>
                 <Radio value={2}>Female</Radio>
               </Radio.Group>
-            </Form.Item>
-
-            <Form.Item label='DatePicker'>
-              <DatePicker />
             </Form.Item>
             <Form.Item
               label='City'
@@ -226,7 +222,7 @@ function StudentList({ data, onRemove, onChange }) {
                 },
               ]}
             >
-              <Select defaultValue={studentEdit?.city}>
+              <Select defaultValue={studentEdit.city}>
                 <Select.Option value='dn'>Da Nang</Select.Option>
                 <Select.Option value='hcm'>Ho Chi Minh</Select.Option>
                 <Select.Option value='hn'>Ha Noi</Select.Option>

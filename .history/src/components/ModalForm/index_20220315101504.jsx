@@ -25,9 +25,8 @@ function ModalForm({ onChange }) {
 
     const formValue = {
       ...value,
-      id: value.id + Math.random() * 1,
+      id: value.id + Math.random() * 10000,
     };
-
     setDataForm(formValue);
     onChange(formValue);
   };
@@ -123,10 +122,6 @@ function ModalForm({ onChange }) {
               <Radio value={2}>Female</Radio>
             </Radio.Group>
           </Form.Item>
-
-          <Form.Item label='DatePicker'>
-            <DatePicker />
-          </Form.Item>
           <Form.Item
             label='City'
             name='city'
@@ -137,6 +132,9 @@ function ModalForm({ onChange }) {
               },
             ]}
           >
+            <Form.Item label='DatePicker'>
+              <DatePicker />
+            </Form.Item>
             <Select>
               <Select.Option value='dn'>Da Nang</Select.Option>
               <Select.Option value='hcm'>Ho Chi Minh</Select.Option>

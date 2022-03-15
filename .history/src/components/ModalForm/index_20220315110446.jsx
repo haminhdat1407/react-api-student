@@ -24,10 +24,10 @@ function ModalForm({ onChange }) {
     const value = { ...e };
 
     const formValue = {
-      ...value,
-      id: value.id + Math.random() * 1,
+      ...value.lenght,
+      // id: value.id + Math.random() * 1,
+      id: 
     };
-
     setDataForm(formValue);
     onChange(formValue);
   };

@@ -27,7 +27,6 @@ function ModalForm({ onChange }) {
       ...value,
       id: value.id + Math.random() * 1,
     };
-
     setDataForm(formValue);
     onChange(formValue);
   };

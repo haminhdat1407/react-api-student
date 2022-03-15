@@ -7,7 +7,6 @@ import {
   Radio,
   Select,
   Table,
-  DatePicker,
 } from 'antd';
 import 'antd/dist/antd.css';
 import dayjs from 'dayjs';
@@ -28,8 +27,8 @@ function StudentList({ data, onRemove, onChange }) {
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [idEdit, setIdEdit] = useState('');
 
-  const [studentEdit, setStudentEdit] = useState({});
-  debugger;
+  const [studentEdit, setStudentEdit] = useState();
+
   useEffect(() => {
     (async () => {
       if (idEdit) {
@@ -211,10 +210,6 @@ function StudentList({ data, onRemove, onChange }) {
                 <Radio value={1}>Male</Radio>
                 <Radio value={2}>Female</Radio>
               </Radio.Group>
-            </Form.Item>
-
-            <Form.Item label='DatePicker'>
-              <DatePicker />
             </Form.Item>
             <Form.Item
               label='City'

@@ -29,7 +29,7 @@ function StudentList({ data, onRemove, onChange }) {
   const [idEdit, setIdEdit] = useState('');
 
   const [studentEdit, setStudentEdit] = useState({});
-  debugger;
+
   useEffect(() => {
     (async () => {
       if (idEdit) {
@@ -212,10 +212,6 @@ function StudentList({ data, onRemove, onChange }) {
                 <Radio value={2}>Female</Radio>
               </Radio.Group>
             </Form.Item>
-
-            <Form.Item label='DatePicker'>
-              <DatePicker />
-            </Form.Item>
             <Form.Item
               label='City'
               name='city'
@@ -226,6 +222,9 @@ function StudentList({ data, onRemove, onChange }) {
                 },
               ]}
             >
+              <Form.Item label='DatePicker'>
+                <DatePicker />
+              </Form.Item>
               <Select defaultValue={studentEdit?.city}>
                 <Select.Option value='dn'>Da Nang</Select.Option>
                 <Select.Option value='hcm'>Ho Chi Minh</Select.Option>

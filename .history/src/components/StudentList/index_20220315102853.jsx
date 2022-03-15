@@ -29,7 +29,7 @@ function StudentList({ data, onRemove, onChange }) {
   const [idEdit, setIdEdit] = useState('');
 
   const [studentEdit, setStudentEdit] = useState({});
-  debugger;
+
   useEffect(() => {
     (async () => {
       if (idEdit) {
@@ -45,7 +45,7 @@ function StudentList({ data, onRemove, onChange }) {
 
   const showModal = (id) => {
     setIsModalVisible(true);
-    setIdEdit(id);
+    idEdit(id);
   };
 
   const handleCloseModal = () => {

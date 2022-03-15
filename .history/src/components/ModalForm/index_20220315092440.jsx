@@ -1,14 +1,5 @@
 // import { Modal, Button } from 'antd';
-import {
-  Button,
-  Form,
-  Input,
-  InputNumber,
-  Modal,
-  Radio,
-  Select,
-  DatePicker,
-} from 'antd';
+import { Button, Form, Input, InputNumber, Modal, Radio, Select } from 'antd';
 import PropTypes from 'prop-types';
 import React, { useState } from 'react';
 
@@ -17,7 +8,7 @@ ModalForm.propTypes = {
 };
 
 function ModalForm({ onChange }) {
-  const [isModalVisible, setIsModalVisible] = useState(false);
+  const [isModalVisible, setIsModalVisible] = useState(true);
   const [dataForm, setDataForm] = useState();
 
   const onFinish = (e) => {
@@ -25,9 +16,8 @@ function ModalForm({ onChange }) {
 
     const formValue = {
       ...value,
-      id: value.id + Math.random() * 1,
+      id: value.id + Math.random() * 10000,
     };
-
     setDataForm(formValue);
     onChange(formValue);
   };
@@ -40,7 +30,7 @@ function ModalForm({ onChange }) {
   };
 
   const handleSubmit = () => {
-    if (!dataForm) setIsModalVisible(false);
+    if (!setDataForm) setIsModalVisible(false);
   };
 
   return (
@@ -122,10 +112,6 @@ function ModalForm({ onChange }) {
               <Radio value={1}>Male</Radio>
               <Radio value={2}>Female</Radio>
             </Radio.Group>
-          </Form.Item>
-
-          <Form.Item label='DatePicker'>
-            <DatePicker />
           </Form.Item>
           <Form.Item
             label='City'
