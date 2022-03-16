@@ -14,10 +14,8 @@ import PropTypes from 'prop-types';
 import React, { useState } from 'react';
 import './style.css';
 
-import { ExclamationCircleOutlined } from '@ant-design/icons';
-
 const { Column, ColumnGroup } = Table;
-const { confirm } = Modal;
+
 StudentList.propTypes = {
   data: PropTypes.array,
   onRemove: PropTypes.func,
@@ -45,21 +43,6 @@ function StudentList({ data, onRemove, onEdit }) {
   const handleEditForm = (valueForm) => {
     onEdit(valueForm);
     setIsModalVisible(false);
-  };
-  const showDeleteConfirm = (dataIndex) => {
-    confirm({
-      title: 'Are you sure delete this student?',
-      icon: <ExclamationCircleOutlined />,
-      okText: 'Yes',
-      okType: 'danger',
-      cancelText: 'No',
-      onOk() {
-        handleRemove(dataIndex);
-      },
-      onCancel() {
-        console.log('Cancel');
-      },
-    });
   };
 
   const columns = [
@@ -118,7 +101,7 @@ function StudentList({ data, onRemove, onEdit }) {
             <Button
               type='primary'
               danger
-              onClick={() => showDeleteConfirm(dataIndex)}
+              onClick={() => handleRemove(dataIndex)}
             >
               Delete
             </Button>

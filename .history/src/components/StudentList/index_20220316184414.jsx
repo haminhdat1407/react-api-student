@@ -48,12 +48,15 @@ function StudentList({ data, onRemove, onEdit }) {
   };
   const showDeleteConfirm = (dataIndex) => {
     confirm({
-      title: 'Are you sure delete this student?',
+      title: 'Are you sure delete this task?',
       icon: <ExclamationCircleOutlined />,
+      content: 'Some descriptions',
       okText: 'Yes',
       okType: 'danger',
       cancelText: 'No',
       onOk() {
+        // console.log('OK');
+
         handleRemove(dataIndex);
       },
       onCancel() {
@@ -118,7 +121,9 @@ function StudentList({ data, onRemove, onEdit }) {
             <Button
               type='primary'
               danger
-              onClick={() => showDeleteConfirm(dataIndex)}
+              onClick={showDeleteConfirm}
+
+              // onClick={() => handleRemove(dataIndex)}
             >
               Delete
             </Button>

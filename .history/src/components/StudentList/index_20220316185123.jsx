@@ -50,6 +50,7 @@ function StudentList({ data, onRemove, onEdit }) {
     confirm({
       title: 'Are you sure delete this student?',
       icon: <ExclamationCircleOutlined />,
+      // content: 'Some descriptions',
       okText: 'Yes',
       okType: 'danger',
       cancelText: 'No',

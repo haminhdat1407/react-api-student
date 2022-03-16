@@ -48,8 +48,9 @@ function StudentList({ data, onRemove, onEdit }) {
   };
   const showDeleteConfirm = (dataIndex) => {
     confirm({
-      title: 'Are you sure delete this student?',
+      title: 'Are you sure delete student?',
       icon: <ExclamationCircleOutlined />,
+      content: 'Some descriptions',
       okText: 'Yes',
       okType: 'danger',
       cancelText: 'No',

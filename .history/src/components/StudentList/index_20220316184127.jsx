@@ -13,7 +13,7 @@ import dayjs from 'dayjs';
 import PropTypes from 'prop-types';
 import React, { useState } from 'react';
 import './style.css';
-
+import { Space } from 'antd';
 import { ExclamationCircleOutlined } from '@ant-design/icons';
 
 const { Column, ColumnGroup } = Table;
@@ -48,13 +48,18 @@ function StudentList({ data, onRemove, onEdit }) {
   };
   const showDeleteConfirm = (dataIndex) => {
     confirm({
-      title: 'Are you sure delete this student?',
+      title: 'Are you sure delete this task?',
       icon: <ExclamationCircleOutlined />,
+      content: 'Some descriptions',
       okText: 'Yes',
       okType: 'danger',
       cancelText: 'No',
       onOk() {
-        handleRemove(dataIndex);
+        // console.log('OK');
+
+        {
+          handleRemove(dataIndex);
+        }
       },
       onCancel() {
         console.log('Cancel');
@@ -118,7 +123,9 @@ function StudentList({ data, onRemove, onEdit }) {
             <Button
               type='primary'
               danger
-              onClick={() => showDeleteConfirm(dataIndex)}
+              onClick={showDeleteConfirm}
+
+              // onClick={() => handleRemove(dataIndex)}
             >
               Delete
             </Button>
