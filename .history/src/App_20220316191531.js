@@ -40,6 +40,7 @@ export default function App() {
   }, [idRemove]);
 
   // search by name
+
   useEffect(() => {
     try {
       (async () => {
@@ -51,17 +52,7 @@ export default function App() {
     }
   }, [searchTerm]);
 
-  /* //add student
-  const newStudent = {
-    id: payload.id,
-    name: payload.name,
-    age: payload.age,
-    mark: payload.mark,
-    gender: payload.gender,
-    city: payload.city,
-    createdAt: payload.createdAt,
-  }; */
-
+  // add student
   useEffect(() => {
     if (data) {
       (async () => {

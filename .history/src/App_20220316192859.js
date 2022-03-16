@@ -40,6 +40,7 @@ export default function App() {
   }, [idRemove]);
 
   // search by name
+
   useEffect(() => {
     try {
       (async () => {
@@ -66,6 +67,7 @@ export default function App() {
     if (data) {
       (async () => {
         const newStudent = await studentApi.addStudent(data);
+
         setStudentList((prevStudent) => [newStudent, ...prevStudent]);
       })();
     }

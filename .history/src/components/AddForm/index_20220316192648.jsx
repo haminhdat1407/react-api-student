@@ -14,7 +14,7 @@ function ModalForm({ onChange }) {
     // e la gia tri cua form ma ham onFinish tra ve
     const formValue = {
       ...e,
-      id: Math.floor(e.id + Math.random() * 1234567) + e.city,
+      id: Math.floor(e.id + Math.random() * 1234567),
     };
     setDataForm(formValue);
     onChange(formValue);
@@ -26,6 +26,7 @@ function ModalForm({ onChange }) {
   const cancelModal = () => {
     setIsModalVisible(false);
   };
+
   const handleSubmit = () => {
     if (!dataForm) setIsModalVisible(false);
   };

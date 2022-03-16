@@ -26,6 +26,7 @@ function ModalForm({ onChange }) {
   const cancelModal = () => {
     setIsModalVisible(false);
   };
+
   const handleSubmit = () => {
     if (!dataForm) setIsModalVisible(false);
   };

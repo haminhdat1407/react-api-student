@@ -16,6 +16,7 @@ import './style.css';
 
 import { ExclamationCircleOutlined } from '@ant-design/icons';
 
+const { Column, ColumnGroup } = Table;
 const { confirm } = Modal;
 StudentList.propTypes = {
   data: PropTypes.array,
@@ -262,4 +263,5 @@ function StudentList({ data, onRemove, onEdit }) {
     </>
   );
 }
+
 export default StudentList;

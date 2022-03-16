@@ -262,4 +262,5 @@ function StudentList({ data, onRemove, onEdit }) {
     </>
   );
 }
+
 export default StudentList;
