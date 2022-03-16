@@ -1,0 +1,14 @@
+.lb-student {
+  font-family: sans-serif;
+  font-size: 24px;
+  margin-left: 40px;
+  currentcolor
+}
+.row-8 {
+  align-items: center;
+  background-color: cyan;
+  margin-bottom: 12px;
+}
+/* .ant-btn-primary {
+  display: none !important;
+} */
